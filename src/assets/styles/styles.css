@@ -1,0 +1,164 @@
+:root {
+	--ink: #0f172a;
+	--ink-dim: #475569;
+	--border: #e2e8f0;
+	--primary: #1d4ed8;
+	--bg: #f3f4f6;
+	--card: #ffffff;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans";
+	color: var(--ink);
+	background: var(--bg);
+}
+
+.page {
+	width: 100%;
+	max-width: 980px;
+	margin: 24px auto;
+	background: var(--card);
+	border: 1px solid var(--border);
+	border-radius: 16px;
+	padding: 20px;
+	box-shadow: 0 6px 24px rgba(15, 23, 42, 0.06);
+}
+
+.title {
+	margin: 0 0 8px;
+	font-size: 22px;
+}
+
+.muted {
+	color: var(--ink-dim);
+	margin-top: 0;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 12px;
+}
+
+.card {
+	border: 1px solid var(--border);
+	border-radius: 12px;
+	padding: 12px;
+}
+
+.field {
+	display: grid;
+	grid-template-columns: 28px 1fr;
+	align-items: center;
+	gap: 8px;
+	margin: 6px 0;
+}
+
+.field input[type=number] {
+	width: 100%;
+	padding: 8px 10px;
+	border: 1px solid var(--border);
+	border-radius: 8px;
+	font-size: 14px;
+}
+
+.actions {
+	display: flex;
+	gap: 8px;
+	justify-content: flex-end;
+	align-items: center;
+	margin-top: 14px;
+}
+
+.btn {
+	appearance: none;
+	border: 1px solid var(--border);
+	background: #fff;
+	color: var(--ink);
+	padding: 10px 14px;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.btn.primary {
+	background: var(--primary);
+	border-color: var(--primary);
+	color: #fff;
+	font-weight: 600;
+}
+
+.btn:hover {
+	filter: brightness(0.98);
+}
+
+.canvas {
+	display: inline-block;
+	border: 1px dashed var(--border);
+	border-radius: 12px;
+	overflow: hidden;
+	background: #fff;
+}
+
+.label {
+	font: 600 14px/1.1 ui-sans-serif, system-ui;
+	fill: var(--ink);
+}
+
+.label.small {
+	font: 600 12px/1 ui-sans-serif, system-ui;
+	fill: var(--ink);
+}
+
+.canvas {
+	width: 100%;
+	max-width: 800px;
+	margin-inline: auto;
+}
+
+.canvas svg {
+	width: 100%;
+	height: auto;
+	aspect-ratio: 1 / 1;
+	display: block;
+}
+
+.alert {
+	background: #fff1f2;
+	border: 1px solid #fecdd3;
+	color: #9f1239;
+	padding: 8px 10px;
+	border-radius: 8px;
+	margin: 8px 0 12px;
+}
+
+.badge {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 4px 8px;
+	background: #eef2ff;
+	border: 1px solid #c7d2fe;
+	color: #3730a3;
+	border-radius: 999px;
+	font-size: 12px;
+	font-weight: bold;
+
+}
+
+
+@media (max-width: 900px) {
+	.grid {
+		grid-template-columns: 1fr;
+	}
+}
