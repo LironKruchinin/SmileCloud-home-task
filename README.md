@@ -1,15 +1,40 @@
-# Triangle Visualizer
+# Triangle Geometry Visualizer
 
-This is a small React + TypeScript project that allows the user to input three points of a triangle and then view the triangle along with its internal angles.
+This project is a small interactive web app built with **Next.js + TypeScript**.  
+It allows users to input or generate random triangle points and then displays key triangle properties in an interactive SVG visualization.
 
-- InputPage: lets the user enter three vertices (X and Y for each point).
-- DisplayPage: shows the triangle inside an 800x800 SVG canvas.
-  - Draws the triangle outline.
-  - Shows arcs at each angle.
-  - Displays angle values inside the triangle.
-- The app uses react-router-dom for navigation between the input page (/) and the display page (/display).
-- Geometry and scaling logic are in simple utility functions.
+## Features
+- Input coordinates manually or generate a **random triangle**.
+- Validates input to ensure points are valid and non-collinear.
+- Calculates and displays:
+  - Side lengths
+  - Angles (with arcs drawn in SVG)
+  - Triangle **area** and **centroid**
+  - Triangle **type** (Equilateral, Isosceles, Scalene, Right, Acute, Obtuse)
+- Highlights **longest / middle / shortest** sides with color coding.
+- Includes **unit switching** (px/cm) and a **history of triangles**.
 
-To run:
-1. Install dependencies with `npm install`.
-2. Start the dev server with `npm run dev`.
+## Tech Stack
+- **React** (frontend + routing)
+- **TypeScript** (type safety)
+- **CSS** (styling)
+- **Math utilities** in `geometry.ts` (angles, centroid, random triangle, etc.)
+
+## Getting Started
+```bash
+git clone <repo-url>
+cd <repo>
+npm install
+npm run dev
+``
+
+
+Use of ChatGPT in This Project
+
+Besides code assistance, I also used ChatGPT as a debugging and documentation partner:
+
+Debugging Queries – I pasted failing SQL and TypeScript snippets and asked for step-by-step reasoning of why they weren’t returning results. Instead of rewriting the code, ChatGPT helped me reason through joins, null checks, and edge cases by suggesting what to log and how to trace variables.
+
+Logging Strategy – I asked for lightweight, practical logging ideas (e.g., console/debug statements and structured logs for runtime checks) to quickly trace where values got lost without cluttering the code.
+
+Documentation Support – I used ChatGPT to draft and refine documentation like the project README and inline comments. This helped me keep the explanations short, recruiter-friendly, and easy to maintain.
