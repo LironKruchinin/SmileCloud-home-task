@@ -33,7 +33,7 @@ Use of ChatGPT in This Project
 
 Besides code assistance, I also used ChatGPT as a debugging and documentation partner:
 
-Debugging Queries – I TypeScript snippets and asked for step-by-step reasoning of why they weren’t returning results. Instead of rewriting the code, ChatGPT helped me reason through joins, null checks, and edge cases by suggesting what to log and how to trace variables.
+Debugging Queries – I described failing TypeScript snippets and asked for step-by-step reasoning of why they weren’t returning results. Instead of rewriting the code, ChatGPT helped me reason through joins, null checks, and edge cases by suggesting what to log and how to trace variables.
 
 Logging Strategy – I asked for lightweight, practical logging ideas (e.g., console/debug statements and structured logs for runtime checks) to quickly trace where values got lost without cluttering the code.
 
