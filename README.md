@@ -26,7 +26,7 @@ git clone <repo-url>
 cd <repo>
 npm install
 npm run dev
-``
+```
 
 
 Use of ChatGPT in This Project
